@@ -1,8 +1,7 @@
 /datum/job/shaft_miner
 	title = JOB_SHAFT_MINER
-	description = "Travel to strange lands. Mine ores. \
-		Meet strange creatures. Kill them for their gold."
-	department_head = list(JOB_QUARTERMASTER)
+	description = "Travel to strange lands, mine ores, \
+		meet strange creatures, kill them for their gold."
 	faction = FACTION_STATION
 	total_positions = 3
 	spawn_positions = 3
@@ -98,9 +97,9 @@
 	r_pocket = /obj/item/extinguisher/mini
 	belt = /obj/item/storage/belt/mining/healing
 
-/datum/outfit/job/miner/equipped/combat/post_equip(mob/living/carbon/human/miner, visualsOnly = FALSE)
+/datum/outfit/job/miner/equipped/combat/post_equip(mob/living/carbon/human/miner, visuals_only = FALSE)
 	. = ..()
-	if(visualsOnly)
+	if(visuals_only)
 		return
 	var/list/miner_contents = miner.get_all_contents()
 	var/obj/item/clothing/suit/hooded/explorer/explorer_suit = locate() in miner_contents

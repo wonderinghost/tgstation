@@ -16,12 +16,13 @@
 		TRAIT_UNHUSKABLE,
 	)
 
-	inherent_biotypes = MOB_HUMANOID|MOB_MINERAL
+	inherent_biotypes = MOB_HUMANOID|MOB_MINERAL|MOB_SKELETAL
 	inherent_respiration_type = RESPIRATION_PLASMA
-	mutantlungs = /obj/item/organ/internal/lungs/plasmaman
-	mutanttongue = /obj/item/organ/internal/tongue/bone/plasmaman
-	mutantliver = /obj/item/organ/internal/liver/bone/plasmaman
-	mutantstomach = /obj/item/organ/internal/stomach/bone/plasmaman
+	mutantlungs = /obj/item/organ/lungs/plasmaman
+	smoker_lungs = /obj/item/organ/lungs/plasmaman/plasmaman_smoker
+	mutanttongue = /obj/item/organ/tongue/bone/plasmaman
+	mutantliver = /obj/item/organ/liver/bone/plasmaman
+	mutantstomach = /obj/item/organ/stomach/bone/plasmaman
 	mutantappendix = null
 	mutantheart = null
 	heatmod = 1.5
@@ -51,6 +52,7 @@
 	bodytemp_cold_damage_limit = (BODYTEMP_COLD_DAMAGE_LIMIT - 50) // about -50c
 
 	outfit_override_registry = list(
+		/datum/outfit/ninja = /datum/outfit/ninja/plasmaman,
 		/datum/outfit/syndicate = /datum/outfit/syndicate/plasmaman,
 		/datum/outfit/syndicate/full = /datum/outfit/syndicate/full/plasmaman,
 		/datum/outfit/syndicate/leader = /datum/outfit/syndicate/leader/plasmaman,
